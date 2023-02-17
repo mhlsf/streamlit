@@ -17,7 +17,7 @@ import shap
 
 #Chargement du dataframe et du modèle
 #model = joblib.load(open('clf_0.pkl','rb'))
-data = pd.read_csv("/home/mogzs/openclassroom/p7/X_test.csv", index_col='SK_ID_CURR', encoding ='utf-8')
+data = pd.read_csv("./X_test.csv", index_col='SK_ID_CURR', encoding ='utf-8')
 
 
 class Gender(Enum):
@@ -31,7 +31,7 @@ class FamilyStatus(Enum):
 
 def load_model():
         '''loading the trained model'''
-        clf = joblib.load(open('/home/mogzs/openclassroom/p7/clf_0.pkl','rb'))
+        clf = joblib.load(open('./clf_0.pkl','rb'))
         return clf
     
 clf = load_model()

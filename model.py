@@ -20,11 +20,11 @@ app = FastAPI()
 
 
 # Prérequis API (data + model + fonction de prédiction)
-X = pd.read_csv("/home/mogzs/openclassroom/p7/data_test.csv", index_col='SK_ID_CURR', encoding ='utf-8')
+X = pd.read_csv("./data_test.csv", index_col='SK_ID_CURR', encoding ='utf-8')
 
 def load_model():
         '''loading the trained model'''
-        clf = joblib.load(open('/home/mogzs/openclassroom/p7/clf_0.pkl','rb'))
+        clf = joblib.load(open('./clf_0.pkl','rb'))
         return clf
     
 clf = load_model()
